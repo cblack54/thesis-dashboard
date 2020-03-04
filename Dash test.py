@@ -21,7 +21,7 @@ colors = {
     'text': '#7FDBFF'
 }
 
-df = pd.read_csv('./Sensor Data for Projects/cleaned/all_cleaned_2.csv')
+df = pd.read_csv('./all_cleaned_2.csv')
 patients = df.patient_id.unique()
 patients.sort()
 
@@ -47,7 +47,7 @@ ticktext = ['12:00am','1:00am','2:00am','3:00am','4:00am','5:00am','6:00am','7:0
 #         dict(Task="Job-1", Start='2017-01-01 02:00', Finish='2017-01-01 02:30', Resource='Not Started'),
 #         dict(Task="Job-1", Start='2017-01-01 02:05', Finish='2017-01-01 02:55', Resource='Incomplete')]
 
-df2 = pd.read_csv('./Sensor Data for Projects/cleaned/gantt_cleaned_1.csv')
+df2 = pd.read_csv('./gantt_cleaned_1.csv')
 df2['Task'] = pd.to_datetime(df2['Task']).dt.date
 # df_intial_2 = df2[df2['patient_id']==3018]
 # print(df_intial_2.head())
